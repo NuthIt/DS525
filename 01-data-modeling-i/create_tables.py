@@ -1,11 +1,29 @@
 import psycopg2
 
 
-table_drop = "DROP TABLE IF EXISTS songplays"
+table_drop = "DROP TABLE IF EXISTS events, actors, orgs"
 
 table_create = """
-    CREATE TABLE IF NOT EXISTS xxx (
-    )
+    CREATE TABLE IF NOT EXISTS actors (
+        id int,
+        login text,
+        display_login text,
+        gravatar_id text,
+        url text,
+        avatar_url text,
+        PRIMARY KEY (id)
+    );
+    CREATE TABLE IF NOT EXISTS orgs (
+        id int,
+        name text,
+        PRIMARY KEY (id)
+    );
+    CREATE TABLE IF NOT EXISTS events (
+        id text,
+        actor_id int,
+        created_at text,
+        PRIMARY KEY (id)
+    );
 """
 
 create_table_queries = [
@@ -44,7 +62,7 @@ def main():
     - Finally, closes the connection.
     """
     conn = psycopg2.connect(
-        "host=127.0.0.1 dbname=postgres user=postgres password=postgres"
+        "host=172.18.0.2 dbname=postgres user=postgres password=postgres"
     )
     cur = conn.cursor()
 
