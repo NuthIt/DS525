@@ -6,6 +6,6 @@ services:
     volumes:
       - .:/home/jovyan/work
     ports:
-      - 8888:8888
+      - 9898:8888
       - 4040:4040
       - 4041:4041
