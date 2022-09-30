@@ -1,3 +1,0 @@
-# Data Modeling II
-
-Test
