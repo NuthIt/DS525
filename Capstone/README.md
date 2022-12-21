@@ -40,3 +40,6 @@ psycpog2
 คำสั่ง crontab โดยการสั่งให้ python ทำงานในทุก 15 นาที
 
 Reboot เครื่องเมื่อทุกอย่างเสร็จสิ้น
+
+## Dashbaord
+![enter image description here](https://cdn.discordapp.com/attachments/953573962519031848/1054986072859344916/6.png)
